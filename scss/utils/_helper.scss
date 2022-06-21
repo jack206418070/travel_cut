@@ -72,3 +72,9 @@
 .align-self-start{
   align-self: flex-start;
 }
+.p-m-0{
+  @media (max-width: 414px) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

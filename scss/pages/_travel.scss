@@ -1,5 +1,8 @@
 .travel{
   margin-bottom: 80px;
+  &.bg{
+    height: 100%;
+  }
 }
 .travel-bg{
   background: linear-gradient(90deg, $primary 18.01%, rgba(255, 91, 0, 0) 98.51%), url('../images/travel-banner.png');
@@ -31,6 +34,34 @@
       margin-top: 24px;
     }
   }
+  @media (max-width: 1024px) {
+    padding: 24px;
+    .content{
+      width: 60%;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 24px;
+    .content{
+      width: 95%;
+    }
+  }
+  @media (max-width: 414px) {
+    height: 195px;
+    background: linear-gradient(90deg, #FF5B00 -8.23%, rgba(255, 91, 0, 0) 127.33%), url('../images/mobile-travel-bg.png');
+    background-size: cover;
+    .content{
+      padding-right: 24px;
+      h3{
+        font-size: 1rem;
+        padding-bottom: 10px;
+      }
+      p{
+        margin-top: 8px;
+        font-size: 0.875rem;
+      }
+    }
+  }
   &.reverse{
     background: linear-gradient(90deg, rgba(255, 91, 0, 0) 15.9%, #FF5B00 98.51%), url('../images/travel-banner-reverse.png');
     .content{
@@ -42,13 +73,40 @@
         }
       }
     }
+    @media (max-width: 768px) {
+      .content{
+        right: 25px;
+      }
+    }
+    @media (max-width: 414px) {
+      background: linear-gradient(90deg, #FF5B00 -8.23%, rgba(255, 91, 0, 0) 127.33%), url('../images/mobile-travel-bg.png');
+      background-size: cover;
+      .content{
+        left: 25px;
+        padding-right: 25px;
+        text-align: left;
+        h3{
+          &::before{
+            left: 25px !important;
+          }
+        }
+      }
+    }
   }
 }
 .travel-inner{
   display: flex;
+  @media (max-width: 414px) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
   .travel-title{
     flex: 0 0 40%;
     padding-right: 20px;
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      padding-right: 0;
+    }
     ul{
       border: 1px solid #E5E5E5;
       border-radius: 5px;
@@ -59,21 +117,87 @@
       border-radius: 5px;
       display: flex;
       margin-bottom: 24px;
+      @media (max-width: 1024px) {
+        display: block;
+      }
+      @media (max-width: 768px) {
+        display: flex;
+      }
+      @media (max-width: 414px){
+        padding: 16px;
+      }
       img{
         align-self: flex-start;
+        @media (max-width: 1024px) {
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 10px;
+        }
+        @media (max-width: 414px){
+          width: 107px;
+          object-fit: cover;
+        }
       }
       .desc{
         padding-left: 24px;
+        @media (max-width: 1024px) {
+          padding-left: 0;
+        }
+        @media (max-width: 768px) {
+          padding-left: 24px;
+        }
+        @media (max-width: 414px){
+          padding-left: 16px;
+          flex: 1 0 auto;
+        }
         h3{
           font-weight: bold;
           margin-bottom: 4px;
+          @media (max-width: 1024px) {
+            text-align: center;
+          }
+          @media (max-width: 768px) {
+            text-align: left;
+          }
+          @media (max-width: 414px){
+            font-size: .875rem;
+          }
         }
         p{
           line-height: 1.5;
           color: #292929;
-          font-size: 0.875rem;
+          font-size: .875rem;
           text-align: justify;
           text-justify:inter-ideograph;
+          @media (max-width: 768px) {
+            margin-bottom: 18px;
+          }
+          @media (max-width: 414px){
+            width: 150px;
+            font-size: .75rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            margin-bottom: 12px;
+          }
+        }
+        a{
+          display: none;
+          font-size: .75rem;
+          margin-left: auto;
+          width: 65px;
+          svg{
+            width: 7px;
+            height: 12px;
+            transform: rotate(-90deg);
+            right: 0px;
+            top: 2px;
+          }
+          @media (max-width: 768px) {
+            display: block;
+          }
         }
       }
       &.more{
@@ -81,6 +205,7 @@
         border:none;
         margin-bottom: 0;
         padding: 10px 0;
+        display: flex;
       }
       a{
         color: $primary;
@@ -103,11 +228,20 @@
     flex: 0 0 60%;
     padding-left: 20px;
     align-self: stretch;
+    position: relative;
+    overflow-y: hidden;
+    @media (max-width: 768px) {
+      display: none;
+    }
     .inner{
       height: 100%;
       border-radius: 5px;
       border: 1px solid #E5E5E5;
       .desc{
+        position: absolute;
+        padding-right: 24px;
+        height: calc(100% - 330px);
+        overflow-y: auto;
         h3{
           font-size: 1.25rem;
           color: #292929;

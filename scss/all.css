@@ -71,7 +71,8 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1330px;
+  padding: 0 25px;
   margin: 0 auto;
 }
 
@@ -173,6 +174,13 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
 .align-self-start {
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+
+@media (max-width: 414px) {
+  .p-m-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 .btn {
@@ -657,6 +665,27 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   z-index: -2;
 }
 
+@media (max-width: 1024px) {
+  .googleMap {
+    height: 500px;
+  }
+  .googleMap::before {
+    height: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .googleMap {
+    height: 500px;
+  }
+  .googleMap::before {
+    height: 800px;
+    background-position: center center;
+    background-size: contain;
+    bottom: 0;
+  }
+}
+
 @media (max-width: 576px) {
   .googleMap {
     height: 250px;
@@ -796,6 +825,10 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   margin-bottom: 80px;
 }
 
+.travel.bg {
+  height: 100%;
+}
+
 .travel-bg {
   background: -webkit-gradient(linear, left top, right top, color-stop(18.01%, #FF5B00), color-stop(98.51%, rgba(255, 91, 0, 0))), url("../images/travel-banner.png");
   background: linear-gradient(90deg, #FF5B00 18.01%, rgba(255, 91, 0, 0) 98.51%), url("../images/travel-banner.png");
@@ -833,6 +866,44 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   margin-top: 24px;
 }
 
+@media (max-width: 1024px) {
+  .travel-bg {
+    padding: 24px;
+  }
+  .travel-bg .content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .travel-bg {
+    padding: 24px;
+  }
+  .travel-bg .content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 414px) {
+  .travel-bg {
+    height: 195px;
+    background: -webkit-gradient(linear, left top, right top, color-stop(-8.23%, #FF5B00), color-stop(127.33%, rgba(255, 91, 0, 0))), url("../images/mobile-travel-bg.png");
+    background: linear-gradient(90deg, #FF5B00 -8.23%, rgba(255, 91, 0, 0) 127.33%), url("../images/mobile-travel-bg.png");
+    background-size: cover;
+  }
+  .travel-bg .content {
+    padding-right: 24px;
+  }
+  .travel-bg .content h3 {
+    font-size: 1rem;
+    padding-bottom: 10px;
+  }
+  .travel-bg .content p {
+    margin-top: 8px;
+    font-size: 0.875rem;
+  }
+}
+
 .travel-bg.reverse {
   background: -webkit-gradient(linear, left top, right top, color-stop(15.9%, rgba(255, 91, 0, 0)), color-stop(98.51%, #FF5B00)), url("../images/travel-banner-reverse.png");
   background: linear-gradient(90deg, rgba(255, 91, 0, 0) 15.9%, #FF5B00 98.51%), url("../images/travel-banner-reverse.png");
@@ -847,10 +918,39 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   right: 0;
 }
 
+@media (max-width: 768px) {
+  .travel-bg.reverse .content {
+    right: 25px;
+  }
+}
+
+@media (max-width: 414px) {
+  .travel-bg.reverse {
+    background: -webkit-gradient(linear, left top, right top, color-stop(-8.23%, #FF5B00), color-stop(127.33%, rgba(255, 91, 0, 0))), url("../images/mobile-travel-bg.png");
+    background: linear-gradient(90deg, #FF5B00 -8.23%, rgba(255, 91, 0, 0) 127.33%), url("../images/mobile-travel-bg.png");
+    background-size: cover;
+  }
+  .travel-bg.reverse .content {
+    left: 25px;
+    padding-right: 25px;
+    text-align: left;
+  }
+  .travel-bg.reverse .content h3::before {
+    left: 25px !important;
+  }
+}
+
 .travel-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 414px) {
+  .travel-inner {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
 }
 
 .travel-inner .travel-title {
@@ -858,6 +958,15 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
       -ms-flex: 0 0 40%;
           flex: 0 0 40%;
   padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .travel-inner .travel-title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    padding-right: 0;
+  }
 }
 
 .travel-inner .travel-title ul {
@@ -875,13 +984,70 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   margin-bottom: 24px;
 }
 
+@media (max-width: 1024px) {
+  .travel-inner .travel-title li {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .travel-inner .travel-title li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 414px) {
+  .travel-inner .travel-title li {
+    padding: 16px;
+  }
+}
+
 .travel-inner .travel-title li img {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
+@media (max-width: 1024px) {
+  .travel-inner .travel-title li img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 414px) {
+  .travel-inner .travel-title li img {
+    width: 107px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
 .travel-inner .travel-title li .desc {
   padding-left: 24px;
+}
+
+@media (max-width: 1024px) {
+  .travel-inner .travel-title li .desc {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .travel-inner .travel-title li .desc {
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: 414px) {
+  .travel-inner .travel-title li .desc {
+    padding-left: 16px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
 }
 
 .travel-inner .travel-title li .desc h3 {
@@ -889,12 +1055,71 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   margin-bottom: 4px;
 }
 
+@media (max-width: 1024px) {
+  .travel-inner .travel-title li .desc h3 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .travel-inner .travel-title li .desc h3 {
+    text-align: left;
+  }
+}
+
+@media (max-width: 414px) {
+  .travel-inner .travel-title li .desc h3 {
+    font-size: .875rem;
+  }
+}
+
 .travel-inner .travel-title li .desc p {
   line-height: 1.5;
   color: #292929;
-  font-size: 0.875rem;
+  font-size: .875rem;
   text-align: justify;
   text-justify: inter-ideograph;
+}
+
+@media (max-width: 768px) {
+  .travel-inner .travel-title li .desc p {
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 414px) {
+  .travel-inner .travel-title li .desc p {
+    width: 150px;
+    font-size: .75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 12px;
+  }
+}
+
+.travel-inner .travel-title li .desc a {
+  display: none;
+  font-size: .75rem;
+  margin-left: auto;
+  width: 65px;
+}
+
+.travel-inner .travel-title li .desc a svg {
+  width: 7px;
+  height: 12px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  right: 0px;
+  top: 2px;
+}
+
+@media (max-width: 768px) {
+  .travel-inner .travel-title li .desc a {
+    display: block;
+  }
 }
 
 .travel-inner .travel-title li.more {
@@ -904,6 +1129,9 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   border: none;
   margin-bottom: 0;
   padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .travel-inner .travel-title li a {
@@ -936,12 +1164,27 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
+  position: relative;
+  overflow-y: hidden;
+}
+
+@media (max-width: 768px) {
+  .travel-inner .travel-content {
+    display: none;
+  }
 }
 
 .travel-inner .travel-content .inner {
   height: 100%;
   border-radius: 5px;
   border: 1px solid #E5E5E5;
+}
+
+.travel-inner .travel-content .inner .desc {
+  position: absolute;
+  padding-right: 24px;
+  height: calc(100% - 330px);
+  overflow-y: auto;
 }
 
 .travel-inner .travel-content .inner .desc h3 {
