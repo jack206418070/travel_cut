@@ -107,6 +107,10 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
   padding-left: 16px;
 }
 
+.pl-9 {
+  padding-left: 36px;
+}
+
 .px-4 {
   padding-left: 12px;
   padding-right: 12px;
@@ -122,9 +126,18 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
   padding-bottom: 8px;
 }
 
+.py-9 {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
 .py-4 {
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+.p-2 {
+  padding: 8px;
 }
 
 .p-6 {
@@ -185,8 +198,8 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
 }
 
 header {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(77, 77, 77, 0.6)), to(rgba(77, 77, 77, 0.4))), url("../../images/headerBg.png");
-  background: linear-gradient(90deg, rgba(77, 77, 77, 0.6) 0%, rgba(77, 77, 77, 0.4) 100%), url("../../images/headerBg.png");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(77, 77, 77, 0.6)), to(rgba(77, 77, 77, 0.4))), url("../images/headerBg.png");
+  background: linear-gradient(90deg, rgba(77, 77, 77, 0.6) 0%, rgba(77, 77, 77, 0.4) 100%), url("../images/headerBg.png");
   background-position: center center;
   background-size: cover;
   border-radius: 0 0 60px 60px;
@@ -370,7 +383,7 @@ footer::before {
   content: "";
   position: absolute;
   width: 100%;
-  background-image: url("../../images/footerBg-2.png");
+  background-image: url("../images/footerBg-2.png");
   bottom: 100px;
   height: 500px;
   z-index: -1;
@@ -378,7 +391,7 @@ footer::before {
 
 footer .f-content {
   background-repeat: no-repeat;
-  background-image: url("../../images/footerBg-1.png");
+  background-image: url("../images/footerBg-1.png");
   padding-top: 180px;
   padding-bottom: 53px;
   -webkit-box-pack: center;
@@ -414,10 +427,6 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   display: block;
 }
 
-.container {
-  height: 1000px;
-}
-
 .roadmap {
   position: relative;
   padding-top: 50px;
@@ -433,7 +442,7 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   margin-left: -30px;
   margin-right: -30px;
   height: 1000px;
-  background-image: url("../../images/roadmapBg.png");
+  background-image: url("../images/roadmapBg.png");
   background-repeat: repeat;
   z-index: -10;
 }
@@ -452,6 +461,7 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
 @media (max-width: 414px) {
   .roadmap {
     width: 414px;
+    margin-bottom: 40px;
   }
 }
 
@@ -633,24 +643,61 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
 
 .googleMap {
   position: relative;
-  height: 1000px;
+  height: 800px;
 }
 
 .googleMap::before {
   content: '';
   position: absolute;
-  background-image: url("../../images/googleMapBg-1-removebg.png");
+  background-image: url("../images/googleMapBg-1-removebg.png");
   background-repeat: no-repeat;
   width: 100%;
   height: 1000px;
-  bottom: 250px;
+  bottom: 50px;
+  z-index: -2;
+}
+
+@media (max-width: 576px) {
+  .googleMap {
+    height: 250px;
+  }
+  .googleMap::before {
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    bottom: 0;
+  }
+}
+
+.googleMap::after {
+  content: '';
+  position: absolute;
+  background-image: url("../images/googleMapBg-4.png");
+  background-repeat: no-repeat;
   z-index: -1;
+  bottom: -45px;
+  width: 295px;
+  height: 295px;
+}
+
+@media (max-width: 768px) {
+  .googleMap::after {
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+  }
 }
 
 .googleMap .googleApi {
   position: relative;
   width: 70%;
   margin: 0 auto;
+}
+
+@media (max-width: 414px) {
+  .googleMap .googleApi {
+    width: 330px;
+  }
 }
 
 .googleMap .googleApi::before {
@@ -660,9 +707,25 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   height: 270px;
   top: -50px;
   left: -90px;
-  background-image: url("../../images/googleMapBg-2.png");
+  background-image: url("../images/googleMapBg-2.png");
   background-repeat: no-repeat;
   z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .googleMap .googleApi::before {
+    width: 150px;
+    height: 150px;
+    left: -100px;
+  }
+}
+
+@media (max-width: 414px) {
+  .googleMap .googleApi::before {
+    background-image: url("../images/mobile-googleApi.png");
+    top: -30px;
+    left: -15px;
+  }
 }
 
 .googleMap .googleApi::after {
@@ -672,6 +735,272 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
   height: 60px;
   bottom: -140px;
   right: -190px;
-  background-image: url("../../images/googleMapBg-3.png");
+  background-image: url("../images/googleMapBg-3.png");
+}
+
+@media (max-width: 768px) {
+  .googleMap .googleApi::after {
+    display: none;
+  }
+}
+
+.googleMap .refrenceRoad {
+  background-color: #FF5B00;
+  position: absolute;
+  width: 45%;
+  right: 0;
+  margin-top: -55px;
+}
+
+.googleMap .refrenceRoad p {
+  font-size: 2rem;
+  color: white;
+  font-weight: 500;
+}
+
+.googleMap .refrenceRoad p::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  background-color: #fff;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .googleMap .refrenceRoad {
+    width: 50%;
+    padding: 12px;
+    margin-top: -25px;
+  }
+  .googleMap .refrenceRoad p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .googleMap .refrenceRoad {
+    width: 50%;
+    padding: 8px;
+    margin-top: -15px;
+  }
+  .googleMap .refrenceRoad p {
+    font-size: .75rem;
+  }
+}
+
+.travel {
+  margin-bottom: 80px;
+}
+
+.travel-bg {
+  background: -webkit-gradient(linear, left top, right top, color-stop(18.01%, #FF5B00), color-stop(98.51%, rgba(255, 91, 0, 0))), url("../images/travel-banner.png");
+  background: linear-gradient(90deg, #FF5B00 18.01%, rgba(255, 91, 0, 0) 98.51%), url("../images/travel-banner.png");
+  height: 280px;
+  border-radius: 4px;
+  position: relative;
+  padding: 40px 110px;
+}
+
+.travel-bg .content {
+  width: 35%;
+  position: absolute;
+}
+
+.travel-bg .content h3 {
+  font-size: 2rem;
+  color: white;
+  padding-bottom: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.travel-bg .content h3::before {
+  position: absolute;
+  content: '';
+  border-top: 2px solid #fff;
+  width: 60%;
+  background-color: #fff;
+  bottom: 0;
+}
+
+.travel-bg .content p {
+  line-height: 1.5;
+  color: white;
+  margin-top: 24px;
+}
+
+.travel-bg.reverse {
+  background: -webkit-gradient(linear, left top, right top, color-stop(15.9%, rgba(255, 91, 0, 0)), color-stop(98.51%, #FF5B00)), url("../images/travel-banner-reverse.png");
+  background: linear-gradient(90deg, rgba(255, 91, 0, 0) 15.9%, #FF5B00 98.51%), url("../images/travel-banner-reverse.png");
+}
+
+.travel-bg.reverse .content {
+  right: 120px;
+  text-align: right;
+}
+
+.travel-bg.reverse .content h3::before {
+  right: 0;
+}
+
+.travel-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.travel-inner .travel-title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  padding-right: 20px;
+}
+
+.travel-inner .travel-title ul {
+  border: 1px solid #E5E5E5;
+  border-radius: 5px;
+}
+
+.travel-inner .travel-title li {
+  padding: 24px;
+  border: 1px solid #E5E5E5;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.travel-inner .travel-title li img {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.travel-inner .travel-title li .desc {
+  padding-left: 24px;
+}
+
+.travel-inner .travel-title li .desc h3 {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.travel-inner .travel-title li .desc p {
+  line-height: 1.5;
+  color: #292929;
+  font-size: 0.875rem;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.travel-inner .travel-title li.more {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  margin-bottom: 0;
+  padding: 10px 0;
+}
+
+.travel-inner .travel-title li a {
+  color: #FF5B00;
+  position: relative;
+}
+
+.travel-inner .travel-title li a svg {
+  position: absolute;
+  top: 8px;
+  right: -20px;
+  width: 8px;
+  height: 5px;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.travel-inner .travel-title li a svg.less {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.travel-inner .travel-content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  padding-left: 20px;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.travel-inner .travel-content .inner {
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #E5E5E5;
+}
+
+.travel-inner .travel-content .inner .desc h3 {
+  font-size: 1.25rem;
+  color: #292929;
+  margin-bottom: 8px;
+}
+
+.travel-inner .travel-content .inner .desc p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  margin-bottom: 8px;
+}
+
+.travel-inner .travel-content .swiper {
+  margin-bottom: 36px;
+}
+
+.priceInfo {
+  margin-bottom: 120px;
+}
+
+.priceInfo ul {
+  background-color: #F7F7F7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.priceInfo ul li {
+  padding: 24px 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+  color: #808080;
+  border-bottom: 3px solid transparent;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.priceInfo ul li.active {
+  color: #292929;
+  background-color: #FFF0E5;
+  border-bottom: 3px solid #FF5B00;
+}
+
+.priceInfo .content {
+  padding-top: 40px;
+}
+
+.priceInfo p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-ideograph;
 }
 /*# sourceMappingURL=all.css.map */

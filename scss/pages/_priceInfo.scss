@@ -1,0 +1,31 @@
+.priceInfo{
+  margin-bottom: 120px;
+  ul{
+    background-color: #F7F7F7;
+    display: flex;
+    li{
+      padding: 24px 0;
+      flex: 0 0 33%;
+      color: #808080;
+      border-bottom: 3px solid transparent;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: .3s;
+      &.active{
+        color: #292929;
+        background-color: #FFF0E5;
+        border-bottom: 3px solid $primary;
+      }
+    }
+  }
+  .content{
+    padding-top: 40px;
+  }
+  p{
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-align: justify;
+    text-justify:inter-ideograph;
+  }
+}

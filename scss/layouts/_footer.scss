@@ -4,14 +4,14 @@ footer{
     content: "";
     position: absolute;
     width: 100%;
-    background-image: url('../../images/footerBg-2.png');
+    background-image: url('../images/footerBg-2.png');
     bottom: 100px;
     height: 500px;
     z-index: -1;
   }
   .f-content{
     background-repeat: no-repeat;
-    background-image: url('../../images/footerBg-1.png');
+    background-image: url('../images/footerBg-1.png');
     padding-top: 180px;
     padding-bottom: 53px;
     justify-content: center;
@@ -36,7 +36,4 @@ footer{
       }
     }
   }
-}
-.container{
-  height: 1000px;
 }

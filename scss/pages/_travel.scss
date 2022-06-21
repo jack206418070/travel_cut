@@ -1,0 +1,129 @@
+.travel{
+  margin-bottom: 80px;
+}
+.travel-bg{
+  background: linear-gradient(90deg, $primary 18.01%, rgba(255, 91, 0, 0) 98.51%), url('../images/travel-banner.png');
+  height: 280px;
+  border-radius: 4px;
+  position: relative;
+  padding: 40px 110px;
+  .content{
+    width: 35%;
+    position: absolute;
+    h3{
+      font-size: 2rem;
+      color: white;
+      padding-bottom: 24px;
+      display: inline-block;
+      position: relative;
+      &::before{
+        position: absolute;
+        content: '';
+        border-top: 2px solid #fff;
+        width: 60%;
+        background-color: #fff;
+        bottom: 0;
+      }
+    }
+    p{
+      line-height: 1.5;
+      color: white;
+      margin-top: 24px;
+    }
+  }
+  &.reverse{
+    background: linear-gradient(90deg, rgba(255, 91, 0, 0) 15.9%, #FF5B00 98.51%), url('../images/travel-banner-reverse.png');
+    .content{
+      right: 120px;
+      text-align: right;
+      h3{
+        &::before{
+          right: 0;
+        }
+      }
+    }
+  }
+}
+.travel-inner{
+  display: flex;
+  .travel-title{
+    flex: 0 0 40%;
+    padding-right: 20px;
+    ul{
+      border: 1px solid #E5E5E5;
+      border-radius: 5px;
+    }
+    li{
+      padding: 24px;
+      border: 1px solid #E5E5E5;
+      border-radius: 5px;
+      display: flex;
+      margin-bottom: 24px;
+      img{
+        align-self: flex-start;
+      }
+      .desc{
+        padding-left: 24px;
+        h3{
+          font-weight: bold;
+          margin-bottom: 4px;
+        }
+        p{
+          line-height: 1.5;
+          color: #292929;
+          font-size: 0.875rem;
+          text-align: justify;
+          text-justify:inter-ideograph;
+        }
+      }
+      &.more{
+        justify-content: center;
+        border:none;
+        margin-bottom: 0;
+        padding: 10px 0;
+      }
+      a{
+        color: $primary;
+        position: relative;
+        svg{
+          position: absolute;
+          top: 8px;
+          right: -20px;
+          width: 8px;
+          height: 5px;
+          transition: transform .3s;
+          &.less{
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+  .travel-content{
+    flex: 0 0 60%;
+    padding-left: 20px;
+    align-self: stretch;
+    .inner{
+      height: 100%;
+      border-radius: 5px;
+      border: 1px solid #E5E5E5;
+      .desc{
+        h3{
+          font-size: 1.25rem;
+          color: #292929;
+          margin-bottom: 8px;
+        }
+        p{
+          font-size: 0.875rem;
+          line-height: 1.5;
+          text-align: justify;
+          text-justify:inter-ideograph;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .swiper{
+      margin-bottom: 36px;
+    }
+  }
+}
