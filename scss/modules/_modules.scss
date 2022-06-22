@@ -246,8 +246,10 @@
         right: 0;
         top: 200px;
         opacity: 1;
+        display: none;
         &.show{
           top: 0;
+          display: block;
         }
       }
       .connect{
