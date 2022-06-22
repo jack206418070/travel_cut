@@ -12,6 +12,9 @@
       font-weight: bold;
       cursor: pointer;
       transition: .3s;
+      @media (max-width: 414px){
+        font-size: .875rem;
+      }
       &.active{
         color: #292929;
         background-color: #FFF0E5;

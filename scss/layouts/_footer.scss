@@ -1,38 +1,87 @@
 footer{
   position: relative;
-  &::before{
-    content: "";
+  svg{
+    vertical-align: middle;
+  }
+  .bg-back-footer{
     position: absolute;
     width: 100%;
-    background-image: url('../images/footerBg-2.png');
-    bottom: 100px;
-    height: 500px;
+    bottom: 0;
     z-index: -1;
+    .mobile{
+      display: none;
+    }
+    @media (max-width: 375px) {
+      .computed{
+        display: none;
+      }
+      .mobile{
+        display: block;
+      }
+    }
   }
   .f-content{
-    background-repeat: no-repeat;
-    background-image: url('../images/footerBg-1.png');
-    padding-top: 180px;
-    padding-bottom: 53px;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding-top: 165px;
+    @media (max-width: 375px) {
+      flex-direction: column;
+      padding-top: 90px;
+    }
+    .bg-footer{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0px;
+      z-index: -1;
+      .mobile{
+        display: none;
+      }
+      @media (max-width: 375px) {
+        .computed{
+          display: none;
+        }
+        .mobile{
+          display: block;
+        }
+      }
+    }
     .logo{
       margin-right: 60px;
+      @media (max-width: 414px) {
+        margin: 0 auto;
+        margin-bottom: 16px;
+      }
     }
     img{
       width: 160px;
       object-fit: contain;
+      @media (max-width: 414px) {
+        width: 88px;
+      }
     }
     .f-desc{
       color: #ffffff;
+      @media (max-width: 414px) {
+        text-align: center;
+      }
       h2{
         font-weight: bold;
+        @media (max-width: 414px) {
+          font-size: .875rem;
+          margin-bottom: 8px;
+        }
       }
       a, p{
         color: #ffffff;
         font-size: 0.875rem;
         line-height: 1.5;
         display: block;
+        @media (max-width: 414px) {
+          font-size: .75rem;
+          margin-bottom: 4px;
+        }
       }
     }
   }
