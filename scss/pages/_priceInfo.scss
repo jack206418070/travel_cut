@@ -1,5 +1,14 @@
 .priceInfo{
-  margin-bottom: 120px;
+  margin-bottom: 250px;
+  @media (max-width: 768px) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: 400px;
+  }
+  @media (max-width: 414px) {
+    margin-bottom: 250px;
+  }
   ul{
     background-color: #F7F7F7;
     display: flex;

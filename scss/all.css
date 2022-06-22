@@ -438,6 +438,7 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
 }
 
 .h-content.fixed {
+  display: none;
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -450,6 +451,10 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
 .h-content.fixed .card {
   top: -180px;
   right: 70px;
+}
+
+.h-content.fixed .card svg {
+  width: auto;
 }
 
 .h-content.fixed .connect {
@@ -493,16 +498,15 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
   .h-content.fixed .card {
     right: 0;
     top: 200px;
+    width: 100%;
     opacity: 1;
-    display: none;
   }
   .h-content.fixed .card.show {
     top: 0;
-    display: block;
   }
   .h-content.fixed .connect {
     padding: 24px;
@@ -643,6 +647,112 @@ footer {
 
 footer svg {
   vertical-align: middle;
+  height: auto;
+}
+
+footer .f-top {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  footer .f-top {
+    top: 40%;
+  }
+}
+
+@media (max-width: 1024px) {
+  footer .f-top {
+    top: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  footer .f-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: -100%;
+  }
+}
+
+@media (max-width: 414px) {
+  footer .f-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: -50%;
+  }
+}
+
+footer .f-top .logo {
+  margin-right: 60px;
+}
+
+@media (max-width: 576px) {
+  footer .f-top .logo {
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+}
+
+footer .f-top img {
+  width: 160px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 576px) {
+  footer .f-top img {
+    width: 88px;
+  }
+}
+
+footer .f-top .f-desc {
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  footer .f-top .f-desc {
+    text-align: center;
+  }
+}
+
+footer .f-top .f-desc h2 {
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  footer .f-top .f-desc h2 {
+    font-size: .875rem;
+    margin-bottom: 8px;
+  }
+}
+
+footer .f-top .f-desc a, footer .f-top .f-desc p {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  display: block;
+}
+
+@media (max-width: 576px) {
+  footer .f-top .f-desc a, footer .f-top .f-desc p {
+    font-size: .75rem;
+    margin-bottom: 4px;
+  }
 }
 
 footer .bg-back-footer {
@@ -656,7 +766,7 @@ footer .bg-back-footer .mobile {
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 576px) {
   footer .bg-back-footer .computed {
     display: none;
   }
@@ -676,7 +786,7 @@ footer .f-content {
   padding-top: 165px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 576px) {
   footer .f-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -689,7 +799,6 @@ footer .f-content {
 footer .f-content .bg-footer {
   position: absolute;
   width: 100%;
-  height: 100%;
   bottom: 0px;
   z-index: -1;
 }
@@ -698,7 +807,7 @@ footer .f-content .bg-footer .mobile {
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 576px) {
   footer .f-content .bg-footer .computed {
     display: none;
   }
@@ -1584,7 +1693,25 @@ footer .f-content .f-desc a, footer .f-content .f-desc p {
 }
 
 .priceInfo {
-  margin-bottom: 120px;
+  margin-bottom: 250px;
+}
+
+@media (max-width: 768px) {
+  .priceInfo {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .priceInfo {
+    margin-bottom: 400px;
+  }
+}
+
+@media (max-width: 414px) {
+  .priceInfo {
+    margin-bottom: 250px;
+  }
 }
 
 .priceInfo ul {
