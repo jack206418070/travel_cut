@@ -376,6 +376,10 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
   padding-right: 50px;
 }
 
+.card-content .card-left p a {
+  color: #000000 !important;
+}
+
 .card-content .card-left p span {
   padding-left: 10px;
   font-weight: bold;
@@ -523,6 +527,16 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
 
 .h-content.fixed .card svg {
   width: auto;
+}
+
+.h-content.fixed .card p a {
+  color: #000000 !important;
+}
+
+.h-content.fixed .card p span {
+  padding-left: 10px;
+  font-weight: bold;
+  color: #000000 !important;
 }
 
 .h-content.fixed .connect {

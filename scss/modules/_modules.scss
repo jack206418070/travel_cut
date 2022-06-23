@@ -105,6 +105,9 @@
         align-items: center;
         margin-bottom: 10px;
         padding-right: 50px;
+        a{
+          color: #000000 !important;
+        }
         span{
           padding-left: 10px;
           font-weight: bold;
@@ -225,6 +228,16 @@
       right: 70px;
       svg{
         width: auto;
+      }
+      p{
+        a{
+          color: #000000 !important;
+        }
+        span{
+          padding-left: 10px;
+          font-weight: bold;
+          color: #000000 !important;
+        }
       }
     }
     .connect{
