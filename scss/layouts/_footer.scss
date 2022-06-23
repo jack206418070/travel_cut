@@ -41,7 +41,7 @@ footer{
       }
     }
     .f-desc{
-      color: #ffffff;
+      color: var(--textSecondary);
       @media (max-width: 576px) {
         text-align: center;
       }
@@ -53,7 +53,7 @@ footer{
         }
       }
       a, p{
-        color: #ffffff;
+        color: var(--textSecondary);
         font-size: 0.875rem;
         line-height: 1.5;
         display: block;
@@ -69,6 +69,9 @@ footer{
     width: 100%;
     bottom: 0;
     z-index: -1;
+    svg{
+      fill: var(--secondary);
+    }
     .mobile{
       display: none;
     }
@@ -119,29 +122,6 @@ footer{
       object-fit: contain;
       @media (max-width: 414px) {
         width: 88px;
-      }
-    }
-    .f-desc{
-      color: #ffffff;
-      @media (max-width: 414px) {
-        text-align: center;
-      }
-      h2{
-        font-weight: bold;
-        @media (max-width: 414px) {
-          font-size: .875rem;
-          margin-bottom: 8px;
-        }
-      }
-      a, p{
-        color: #ffffff;
-        font-size: 0.875rem;
-        line-height: 1.5;
-        display: block;
-        @media (max-width: 414px) {
-          font-size: .75rem;
-          margin-bottom: 4px;
-        }
       }
     }
   }

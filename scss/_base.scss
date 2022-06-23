@@ -30,9 +30,49 @@ html, body{
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+  line-height: 1.2;
 }
-body {
-	line-height: 1.2;
+.outer {
+  &.theme1{
+    --primary: #FF5B00;
+    --secondary: #FFF0E5;
+    --thirdary: rgba(255, 91, 0, 0);
+    --forthary: #FF5B00;
+    --textPrimary: #FF5B00;
+    --textSecondary: #FFFFFF;
+  }
+  &.theme2{
+    --primary: #26BEC9;
+    --secondary: #E9F8FA;
+    --thirdary: rgba(38, 190, 201, 0);
+    --forthary: #26BEC9;
+    --textPrimary: #26BEC9;
+    --textSecondary: #FFFFFF;
+  }
+  &.theme3{
+    --primary: #210CAE;
+    --secondary: #E6EDFF;
+    --thidary: rgba(33, 12, 174, 0);
+    --forthary: #4DC9E6;
+    --textPrimary: #210CAE;
+    --textSecondary: #FFFFFF;
+  }
+  &.theme4{
+    --primary: #5CB270;
+    --secondary: #E9F3EB;
+    --thidary: rgba(92, 178, 112, 0);
+    --forthary: #F4F269;
+    --textPrimary: #1F4929;
+    --textSecondary: #1F4929;
+  }
+  &.theme5{
+    --primary: #AA6BD3;
+    --secondary: #F2EBF7;
+    --thidary: rgba(170, 107, 211, 0);
+    --forthary: #DD6A9A;
+    --textPrimary: #AA6BD3;
+    --textSecondary: #FFFFFF;
+  }
 }
 svg{
   width: 100%;

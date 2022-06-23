@@ -92,21 +92,21 @@
     }
   }
   .refrenceRoad{
-    background-color: $primary;
+    background: linear-gradient(78.12deg, var(--forthary) -10.2%, var(--primary) 115.8%);
     position: absolute;
     width: 45%;
     right:0;
     margin-top: -55px;
     p{
       font-size: 2rem;
-      color: white;
+      color: var(--textSecondary);
       font-weight: 500;
       &::before{
         content: "";
         position: absolute;
         width: 60%;
         height: 1px;
-        background-color: #fff;
+        background-color: var(--textSecondary);
         right:0;
         top: 0;
         bottom: 0;

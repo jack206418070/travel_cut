@@ -26,8 +26,8 @@
       }
       &.active{
         color: #292929;
-        background-color: #FFF0E5;
-        border-bottom: 3px solid $primary;
+        background-color: var(--secondary);
+        border-bottom: 3px solid var(--primary);
       }
     }
   }
