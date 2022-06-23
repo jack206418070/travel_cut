@@ -656,7 +656,7 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
   right: 0;
   margin: auto;
   padding: 24px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 180px);
   overflow-y: auto;
   background-color: #fff;
   border-radius: 4px;
@@ -1373,6 +1373,25 @@ footer .f-content img {
   height: 800px;
 }
 
+.googleMap .btn-computed, .googleMap .btn-mobile {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.googleMap .btn-mobile {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .googleMap .btn-mobile {
+    display: block;
+  }
+  .googleMap .btn-computed {
+    display: none;
+  }
+}
+
 .googleMap::before {
   content: '';
   position: absolute;
@@ -1741,6 +1760,17 @@ footer .f-content img {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 24px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.travel-inner .travel-title li:hover {
+  border: 1px solid var(--primary);
+}
+
+.travel-inner .travel-title li.active {
+  border: 1px solid var(--primary);
 }
 
 @media (max-width: 1024px) {

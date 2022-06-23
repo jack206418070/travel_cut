@@ -171,6 +171,8 @@
       </div>
       <div class="googleMap">
         <div class="googleApi">
+          <div class="btn-computed" @click="isTravelDetail = true"></div>
+          <a href="./mobile_travelDetail.html" class="btn-mobile"></a>
           <img src="./images/googleMap.png" alt="googleApi">
         </div>
         <div class="refrenceRoad py-9 pl-9">
@@ -191,14 +193,14 @@
             <div class="travel-title">
               <ul class="p-2">
                 <template v-for="(item, index) in travelData1" :key="item.id">
-                  <li v-if="index < 4 || isMore === true">
+                  <li v-if="index < 4 || isMore === true" :class="{'active': tempTravelData.id === item.id}" @click="tempTravelData = item">
                     <img src="./images/澎湖灘.png" alt="澎湖">
                     <div class="desc">
                       <h3>澎湖灘</h3>
                       <p>
                         趣味漁村導覽之旅，高處遠眺小白沙嶼、小富士山、後山大峽谷。在本島除了奎壁山與赤嶼間的岩脈易於觀察之外，後寮赤崁頭東岸、西溪至成功灣的海蝕平台上以及山水、鎖港等地，都有成分不盡相同的岩脈...
                       </p>
-                      <a href="#">
+                      <a href="./mobile_travelDetail.html">
                         <span>查看更多</span>
                         <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -326,7 +328,7 @@
                       <p>
                         趣味漁村導覽之旅，高處遠眺小白沙嶼、小富士山、後山大峽谷。在本島除了奎壁山與赤嶼間的岩脈易於觀察之外，後寮赤崁頭東岸、西溪至成功灣的海蝕平台上以及山水、鎖港等地，都有成分不盡相同的岩脈...
                       </p>
-                      <a href="#">
+                      <a href="./mobile_travelDetail.html">
                         <span>查看更多</span>
                         <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -428,7 +430,7 @@
                       <p>
                         趣味漁村導覽之旅，高處遠眺小白沙嶼、小富士山、後山大峽谷。在本島除了奎壁山與赤嶼間的岩脈易於觀察之外，後寮赤崁頭東岸、西溪至成功灣的海蝕平台上以及山水、鎖港等地，都有成分不盡相同的岩脈...
                       </p>
-                      <a href="#">
+                      <a href="./mobile_travelDetail.html">
                         <span>查看更多</span>
                         <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -708,8 +710,8 @@
           </div>
         </div>
       </div>
-      <div class="modal-travel">
-        <div class="modal-travel-close"></div>
+      <div class="modal-travel" :class="{'show': isTravelDetail}">
+        <div class="modal-travel-close" @click="isTravelDetail = false"></div>
         <h4 class="modal-travel-title">
           第一天
         </h4>
@@ -807,11 +809,13 @@
           count: 6,
           direction: ['top', 'bottom'],
           length: ['s', 'l'],
+          tempTravelData: {},
           roadmapSet: [],
           isCard1: false,
           isCard2: false,
           footerFixed: false,
-          isMore: false
+          isMore: false,
+          isTravelDetail: false
         }
       },
       computed: {

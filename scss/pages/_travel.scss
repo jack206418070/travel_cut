@@ -146,6 +146,14 @@
       border-radius: 5px;
       display: flex;
       margin-bottom: 24px;
+      transition: .3s;
+      cursor: pointer;
+      &:hover{
+        border: 1px solid var(--primary);
+      }
+      &.active{
+        border: 1px solid var(--primary);
+      }
       @media (max-width: 1024px) {
         display: block;
       }
