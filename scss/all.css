@@ -273,7 +273,7 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
   position: absolute;
   right: 25px;
   bottom: 139px;
-  z-index: 10;
+  z-index: -100;
 }
 
 .card svg {
@@ -282,8 +282,16 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
   width: auto;
 }
 
+@media (min-width: 415px) {
+  .card {
+    display: none;
+  }
+}
+
 .card.show {
   opacity: 1;
+  z-index: 10;
+  display: block;
 }
 
 .card-bg {
