@@ -301,7 +301,7 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
   top: 14px;
   width: 12px;
   height: 12px;
-  background-image: url("../../images/close.png");
+  background-image: url("../images/close.png");
   background-size: cover;
   cursor: pointer;
   z-index: 13;
