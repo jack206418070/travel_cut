@@ -379,6 +379,7 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
 .card-content .card-left p span {
   padding-left: 10px;
   font-weight: bold;
+  color: #000000 !important;
 }
 
 .card-content .card-right {
