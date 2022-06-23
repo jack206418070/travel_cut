@@ -132,14 +132,19 @@
       }
       &.count-normal{
         width: 100%;
+        padding-right: 30px;
         li{
           width: 100%;
+          margin-left: -25px;
           &:last-child{
             width: 0;
           }
           .circle{
             p.last{
               left: -73px;
+            }
+            p.first{
+              left: -5px;
             }
           }
         }

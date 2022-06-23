@@ -569,6 +569,7 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
   }
   .h-content.fixed .connect {
     padding: 24px;
+    padding-bottom: 0;
   }
   .h-content.fixed .connect ul {
     -ms-flex-wrap: wrap;
@@ -661,7 +662,7 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
 .modal-travel-close {
   height: 18px;
   width: 18px;
-  background: url("../../images/close.png") no-repeat;
+  background: url("../images/close.png") no-repeat;
   position: absolute;
   right: 24px;
   top: 30px;
@@ -1179,15 +1180,20 @@ footer .f-content img {
   }
   .roadmap ul.count-normal {
     width: 100%;
+    padding-right: 30px;
   }
   .roadmap ul.count-normal li {
     width: 100%;
+    margin-left: -25px;
   }
   .roadmap ul.count-normal li:last-child {
     width: 0;
   }
   .roadmap ul.count-normal li .circle p.last {
     left: -73px;
+  }
+  .roadmap ul.count-normal li .circle p.first {
+    left: -5px;
   }
 }
 
