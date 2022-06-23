@@ -11,6 +11,15 @@
 
 <body>
   <div id="app">
+    <div class="select-color" style="position: fixed; top: 0; right: 0; height: 100px; z-index: 9999">
+      <select name="color" id="color" v-model="is_theme">
+        <option value="theme1" selected>主題色一</option>
+        <option value="theme2">主題色二</option>
+        <option value="theme3">主題色三</option>
+        <option value="theme4">主題色四</option>
+        <option value="theme5">主題色五</option>
+      </select>
+    </div>
     <div class="outer" :class="is_theme">
       <header class="h-100">
         <div class="h-logo">
@@ -805,7 +814,7 @@
               id: 3
             }
           ],
-          is_theme: 'theme5',
+          is_theme: 'theme1',
           count: 6,
           direction: ['top', 'bottom'],
           length: ['s', 'l'],
