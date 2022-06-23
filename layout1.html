@@ -827,8 +827,14 @@
           }
         }
       },
+      watch: {
+        count () {
+          this.setRoadMap()
+        }
+      },
       methods: {
         setRoadMap () {
+          this.roadmapSet = []
           let flag = 1
           for (let i = 0; i < this.count; i++) {
             if (i === 0) {

@@ -212,16 +212,17 @@
     }
   }
   &.fixed{
-    display: none;
+    bottom: -180px;
     position: fixed;
     width: 100%;
-    bottom: 0;
     z-index: 1000;
     background: none;
     border: 0;
     padding: 0;
+    display: block;
+    transition: .3s;
     &.show{
-      display: block;
+      bottom: 0;
     }
     .card{
       top: -180px;
@@ -253,7 +254,6 @@
       .card{
         right: 30px;
       }
-      display: block;
       .connect{
         padding: 24px 30px;
         h3, p, button{

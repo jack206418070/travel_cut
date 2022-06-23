@@ -506,18 +506,20 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
 }
 
 .h-content.fixed {
-  display: none;
+  bottom: -180px;
   position: fixed;
   width: 100%;
-  bottom: 0;
   z-index: 1000;
   background: none;
   border: 0;
   padding: 0;
+  display: block;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .h-content.fixed.show {
-  display: block;
+  bottom: 0;
 }
 
 .h-content.fixed .card {
@@ -551,9 +553,6 @@ p, a, span, li, td, th, h1, h2, h3, h4, h5 {
 }
 
 @media (max-width: 768px) {
-  .h-content.fixed {
-    display: block;
-  }
   .h-content.fixed .card {
     right: 30px;
   }
